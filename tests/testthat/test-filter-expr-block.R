@@ -5,6 +5,8 @@ test_that("filter-expr-block", {
   expect_s3_class(block, "filter_expr_block")
   expect_type(block, "list")
 
+  expect_true(is_initialized(block))
+
   res <- evaluate_block(block, data)
   expect_identical(unique(as.character(res$Species)), "virginica")
 
