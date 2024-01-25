@@ -24,6 +24,14 @@ library(bslib)
 [![codecov](https://codecov.io/github/blockr-org/blockr.extra/graph/badge.svg?token=9AO88LK8FJ)](https://codecov.io/github/blockr-org/blockr)
 <!-- badges: end -->
 
+## Content
+
+Provides the following blocks:
+
+- `filter_expr_block`
+- `summarize_expr_block`
+- `admiral_dpc_block`
+
 ## Usage
 
 ```r
