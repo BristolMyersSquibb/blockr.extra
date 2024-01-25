@@ -33,6 +33,9 @@ library(blockr.extra)
 options(BLOCKR_DEV = TRUE)
 pkgload::load_all(".")
 
+stack <- new_stack(data_block, filter_expr_block)
+serve_stack(stack)
+
 # see admiral vingette for how to use admiral_dpc_block
 stack <- new_stack(data_block, mutate_block, admiral_dpc_block)
 serve_stack(stack)
