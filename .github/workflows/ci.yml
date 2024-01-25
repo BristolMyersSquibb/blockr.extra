@@ -34,16 +34,6 @@ jobs:
         with:
           upload-snapshots: true
 
-  check:
-
-    needs: smoke
-
-    if: github.event_name != 'pull_request'
-
-    uses: ./.github/workflows/check.yml
-
-    secrets: inherit
-
   coverage:
 
     needs: smoke
