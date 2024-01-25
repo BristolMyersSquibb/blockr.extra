@@ -24,6 +24,14 @@ library(bslib)
 [![codecov](https://codecov.io/github/blockr-org/blockr.extra/graph/badge.svg?token=9AO88LK8FJ)](https://codecov.io/github/blockr-org/blockr)
 <!-- badges: end -->
 
+## Content
+
+Provides the following blocks:
+
+- `filter_expr_block`
+- `summarize_expr_block`
+- `admiral_dpc_block`
+
 ## Usage
 
 ```r
@@ -33,7 +41,11 @@ library(blockr.extra)
 options(BLOCKR_DEV = TRUE)
 pkgload::load_all(".")
 
-stack <- new_stack(data_block, filter_expr_block)
+stack <- new_stack(
+  data_block,
+  filter_expr_block,
+  summarize_expr_block
+);
 serve_stack(stack)
 
 # see admiral vingette for how to use admiral_dpc_block
