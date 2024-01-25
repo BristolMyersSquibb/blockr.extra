@@ -1,17 +1,32 @@
+---
+output: github_document
+always_allow_html: true
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+library(blockr)
+library(bslib)
+```
 
 # blockr.extra
 
 <!-- badges: start -->
-
 [![ci](https://github.com/blockr-org/blockr.extra/actions/workflows/ci.yml/badge.svg)](https://github.com/blockr-org/blockr.extra/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/github/blockr-org/blockr.extra/graph/badge.svg?token=9AO88LK8FJ)](https://codecov.io/github/blockr-org/blockr)
 <!-- badges: end -->
 
 ## Usage
 
-``` r
+```r
 library(blockr)
 library(blockr.extra)
 
@@ -21,14 +36,14 @@ pkgload::load_all(".")
 # see admiral vingette for how to use admiral_dpc_block
 stack <- new_stack(data_block, mutate_block, admiral_dpc_block)
 serve_stack(stack)
+
 ```
 
 ## Installation
 
-You can install the development version of blockr.extra from
-[GitHub](https://github.com/) with:
+You can install the development version of blockr.extra from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("blockr-org/blockr.extra")
 ```
