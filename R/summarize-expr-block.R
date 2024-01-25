@@ -67,19 +67,20 @@ new_summarize_expr_block <- function(data,
   # 3. fields
   fields <- list(
     new_cols = new_keyvalue_field(
+      value = new_cols,
+      submit = TRUE,
       title = "Summarise each group down to one row",
       descr = "Name-value pairs of summary functions. The name will be the name
-               of the variable in the result.",
-      value = new_cols,
-      submit = TRUE
+               of the variable in the result."
     ),
     group_by = new_select_field(
-      title = "Grouping variables",
-      descr = "Selection of columns to group by for just this
-              operation, functioning as an alternative to group_by()",
       value = group_by,
       choices = data_cols,
-      multiple = TRUE),
+      multiple = TRUE,
+      title = "Grouping variables",
+      descr = "Selection of columns to group by for just this
+              operation, functioning as an alternative to group_by()"
+    ),
     expression = new_hidden_field(main_expr)
   )
 
