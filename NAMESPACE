@@ -2,8 +2,10 @@
 
 S3method(ui_fields,admiral_dpc_block)
 S3method(ui_fields,filter_expr_block)
+S3method(ui_fields,summarize_expr_block)
 export(admiral_dpc_block)
 export(filter_expr_block)
+export(summarize_expr_block)
 import(blockr)
 importFrom(admiral,derive_param_computed)
 importFrom(dplyr,filter)
