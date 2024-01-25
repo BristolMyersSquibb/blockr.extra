@@ -1,0 +1,45 @@
+Package: blockr.extra
+Title: Experimental Blocks for blockr
+Version: 0.0.1.9000
+Authors@R:
+    c(person(given = "Christoph",
+             family = "Sax",
+             email = "christoph.sax@gmail.com",
+             role = c("aut", "cre"),
+             comment = c(ORCID = "0000-0002-7192-7044")),
+      person(given = "Nicolas",
+             family = "Bennett",
+             role = c("aut"),
+             email = "nicolas@cynkra.com"),
+      person(given = "David",
+             family = "Granjon",
+             role = c("aut"),
+             email = "david@cynkra.com"),
+      person(given = "John",
+             family = "Coene",
+             role = c("aut"),
+             email = "john@opifex.org"),
+      person(family = "Bristol Myers Squibb",
+           role = c("cph", "fnd"))
+    )
+Description: Experimental Blocks for blockr.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends:
+    blockr
+Imports:
+    shiny,
+    admiral,
+    rlang
+Remotes:
+    blockr-org/blockr
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    pkgload,
+    htmlwidgets
+Config/testthat/edition: 3
+VignetteBuilder: knitr
