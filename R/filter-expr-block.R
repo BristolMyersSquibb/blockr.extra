@@ -23,8 +23,17 @@ filter_expr_expression <- function(value = c(a = "2.1", b = "4.5")) {
 
 new_filter_expr_block <- function(data, value = NULL, ...) {
   fields <- list(
-    # value = new_keyvalue_field(value = value),
-    value = new_keyvalue_field(value = value, submit = TRUE, multiple = TRUE, key = "none"),
+    value = new_keyvalue_field(
+      value = value,
+      submit = TRUE,
+      multiple = TRUE,
+      key = "none",
+      title = "Keep rows that match a condition",
+      descr = "The filter() function is used to subset a data frame, retaining
+              all rows that satisfy your conditions. To be retained, the row
+              must produce a value of TRUE for all conditions."
+
+    ),
     expression = new_hidden_field(filter_expr_expression)
   )
 
