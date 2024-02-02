@@ -33,7 +33,9 @@ Imports:
     shiny,
     admiral,
     dplyr,
-    rlang
+    rlang,
+    ggplot2,
+    ggiraph
 Remotes:
     blockr-org/blockr
 Suggests:
