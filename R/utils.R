@@ -81,12 +81,12 @@ register_blockr_extra_blocks <- function(pkg) {
       c("ggiraph_block", "plot_block"),
       c("asfactor_block", "transform_block"),
       c("demo_dataset_block", "data_block"),
-      c("demo_join_block", "transform_block"),
+      c("demo_join_block", "transform_block", "submit_block"),
       c("demo_arrange_block", "transform_block"),
       c("demo_group_by_block", "transform_block"),
-      c("demo_filter_block_1", "transform_block"),
-      c("demo_filter_block_2", "transform_block"),
-      c("demo_summarize_block", "transform_block")
+      c("demo_filter_block_1", "transform_block", "submit_block"),
+      c("demo_filter_block_2", "transform_block", "submit_block"),
+      c("demo_summarize_block", "transform_block", "submit_block")
     ),
     input = c(
       "data.frame",
