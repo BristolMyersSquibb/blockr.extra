@@ -9,7 +9,7 @@ filter_expr_block(data, ...)
 \arguments{
 \item{data}{Block input data}
 
-\item{...}{Any other params. TO DO}
+\item{...}{Further (metadata) attributes}
 }
 \description{
 Filter Expression Block

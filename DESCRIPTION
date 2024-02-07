@@ -26,7 +26,7 @@ Description: Experimental Blocks for blockr.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 Depends:
     blockr
 Imports:
@@ -40,6 +40,7 @@ Remotes:
     blockr-org/blockr
 Suggests:
     knitr,
+    shinyAce,
     rmarkdown,
     testthat (>= 3.0.0),
     pkgload,
