@@ -374,7 +374,7 @@ demo_join_block <- function(data, ...) {
       data,
       y = "demo",
       type = "inner",
-      by_col = c("STUDYID", "USUBJID"),
+      by = c("STUDYID", "USUBJID"),
       ...
     ),
     data
