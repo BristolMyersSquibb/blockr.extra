@@ -54,7 +54,9 @@ register_blockr_extra_blocks <- function(pkg) {
       demo_summarize_block,
       admiral_dpc_block,
       filter_expr_block,
-      summarize_expr_block
+      summarize_expr_block,
+      code_transform_block,
+      code_plot_block
     ),
     name = c(
       "plot block",
@@ -70,7 +72,9 @@ register_blockr_extra_blocks <- function(pkg) {
       "demo summarize block",
       "admiral dpc block",
       "filter expr block",
-      "summarize expr block"
+      "summarize expr block",
+      "code transform block",
+      "code plot block"
     ),
     description = c(
       "Monolithic ggplot block",
@@ -86,7 +90,9 @@ register_blockr_extra_blocks <- function(pkg) {
       "Predefined summarize block for BMS demo",
       "Admiral block",
       "Filter expr block",
-      "Summarize expr block"
+      "Summarize expr block",
+      "Code transform block",
+      "Code plot block"
     ),
     classes = list(
       c("plot_block", "submit_block"),
@@ -102,7 +108,9 @@ register_blockr_extra_blocks <- function(pkg) {
       c("demo_summarize_block", "transform_block", "submit_block"),
       c("admiral_dpc_block", "transform_block"),
       c("filter_expr_block", "transform_block"),
-      c("summarize_expr_block", "transform_block")
+      c("summarize_expr_block", "transform_block"),
+      c("code_transform_block", "transform_block", "submit_block"),
+      c("code_plot_block", "plot_block", "submit_block")
     ),
     input = c(
       "data.frame",
@@ -118,11 +126,15 @@ register_blockr_extra_blocks <- function(pkg) {
       "data.frame",
       "data.frame",
       "data.frame",
+      "data.frame",
+      "data.frame",
       "data.frame"
     ),
     output = c(
       "list",
       "list",
+      "data.frame",
+      "data.frame",
       "data.frame",
       "data.frame",
       "data.frame",

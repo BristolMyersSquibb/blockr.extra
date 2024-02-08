@@ -77,7 +77,7 @@ new_code_plot_block <- function(data, ...) {
         eval()
     }),
     ...,
-    class = c("code_transform_block", "plot_block", "submit_block")
+    class = c("code_plot_block", "plot_block", "submit_block")
   )
 }
 
