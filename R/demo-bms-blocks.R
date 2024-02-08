@@ -123,7 +123,7 @@ new_plot_block <- function(
         )
     }),
     ...,
-    class = c("plot_block")
+    class = c("plot_block", "submit_block")
   )
 }
 
@@ -281,7 +281,7 @@ new_ggiraph_block <- function(
       )
     }),
     ...,
-    class = c("ggiraph_block", "plot_block")
+    class = c("ggiraph_block", "plot_block", "submit_block")
   )
 }
 
@@ -356,29 +356,39 @@ asfactor_block <- function(data, ...) {
 
 #' @rdname demo_block
 #' @export
+lab_data_block <- function(...) {
+  initialize_block(new_data_block(
+    ...,
+    dat = as.environment("package:blockr.data"),
+    selected = "lab"
+  ))
+}
+
+#' @rdname demo_block
+#' @export
 demo_data_block <- function(...) {
-  initialize_block(
-    new_data_block(
-      ...,
-      dat = as.environment("package:blockr.data"),
-      selected = "lab"
-    )
-  )
+  initialize_block(new_data_block(
+    ...,
+    dat = as.environment("package:blockr.data"),
+    selected = "demo"
+  ))
 }
 
 #' @rdname demo_block
 #' @export
 demo_join_block <- function(data, ...) {
-  initialize_block(
+  blk <- initialize_block(
     new_join_block(
       data,
-      y = "demo",
       type = "inner",
       by = c("STUDYID", "USUBJID"),
       ...
     ),
     data
   )
+  class(blk) <- class(blk)[-3]
+  blk$submit <- NULL
+  blk
 }
 
 #' @rdname demo_block
@@ -404,7 +414,7 @@ demo_group_by_block <- function(data, ...) {
 #' @rdname demo_block
 #' @export
 demo_filter_block_1 <- function(data, ...) {
-  initialize_block(
+  blk <- initialize_block(
     new_filter_block(
       data,
       columns = "LBTEST",
@@ -413,12 +423,15 @@ demo_filter_block_1 <- function(data, ...) {
     ),
     data
   )
+  class(blk) <- class(blk)[-3]
+  blk$submit <- NULL
+  blk
 }
 
 #' @rdname demo_block
 #' @export
 demo_filter_block_2 <- function(data, ...) {
-  initialize_block(
+  blk <- initialize_block(
     new_filter_block(
       data,
       columns = "VISIT",
@@ -428,12 +441,15 @@ demo_filter_block_2 <- function(data, ...) {
     ),
     data
   )
+  class(blk) <- class(blk)[-3]
+  blk$submit <- NULL
+  blk
 }
 
 #' @rdname demo_block
 #' @export
 demo_summarize_block <- function(data, ...) {
-  initialize_block(
+  blk <- initialize_block(
     new_summarize_block(
       data,
       default_columns = c("LBSTRESN", "LBSTRESN"),
@@ -441,4 +457,7 @@ demo_summarize_block <- function(data, ...) {
     ),
     data
   )
+  class(blk) <- class(blk)[-3]
+  blk$submit <- NULL
+  blk
 }
