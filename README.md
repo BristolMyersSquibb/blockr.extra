@@ -13,9 +13,11 @@
 
 Provides the following blocks:
 
-- `filter_expr_block`
-- `summarize_expr_block`
-- `admiral_dpc_block`
+  - `filter_expr_block`
+  - `summarize_expr_block`
+  - `admiral_dpc_block`
+  - `code_plot_block`
+  - `code_transform_block`
 
 ## Usage
 
