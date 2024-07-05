@@ -1,12 +1,11 @@
 # pkgload::load_all(".");
-# stack <- new_stack(data_block, summarize_expr_block);
+# stack <- new_stack(new_dataset_block, new_summarize_expr_block);
 # serve_stack(stack)
 
 #' @importFrom admiral derive_param_computed
 #' @importFrom rlang exprs
 #' @import blockr
-new_summarize_expr_block <- function(data,
-                                     new_cols = NULL,
+new_summarize_expr_block <- function(new_cols = NULL,
                                      group_by = NULL,
                                      ...) {
 
@@ -93,17 +92,7 @@ new_summarize_expr_block <- function(data,
   )
 }
 
-#' Summarize By Block
-#'
-#' @inheritParams blockr::new_block
-#'
 #' @export
-summarize_expr_block <- function(data, ...) {
-  initialize_block(new_summarize_expr_block(data, ...), data)
-}
-
-
-#' @export
-ui_fields.summarize_expr_block <- function(x, ns, inputs_hidden, ...) {
-  ui_fields_one_column(x = x, ns = ns, inputs_hidden = inputs_hidden)
-}
+#ui_fields.summarize_expr_block <- function(x, ns, inputs_hidden, ...) {
+#  ui_fields_one_column(x = x, ns = ns, inputs_hidden = inputs_hidden)
+#}

@@ -3,23 +3,17 @@
 \name{code_block}
 \alias{code_block}
 \alias{new_code_transform_block}
-\alias{code_transform_block}
 \alias{new_code_plot_block}
-\alias{code_plot_block}
 \title{Code Block}
 \usage{
-new_code_transform_block(data, ...)
+new_code_transform_block(...)
 
-code_transform_block(data, ...)
-
-new_code_plot_block(data, ...)
-
-code_plot_block(data, ...)
+new_code_plot_block(...)
 }
 \arguments{
-\item{data}{Dataset.}
-
 \item{...}{Ignored.}
+
+\item{data}{Dataset.}
 }
 \description{
 Code Block

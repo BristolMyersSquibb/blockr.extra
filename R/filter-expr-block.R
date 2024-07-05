@@ -21,7 +21,7 @@ filter_expr_expression <- function(value = c(a = "2.1", b = "4.5")) {
   )
 }
 
-new_filter_expr_block <- function(data, value = NULL, ...) {
+new_filter_expr_block <- function(value = NULL, ...) {
   fields <- list(
     value = new_keyvalue_field(
       value = value,
@@ -43,16 +43,6 @@ new_filter_expr_block <- function(data, value = NULL, ...) {
     ...,
     class = c("filter_expr_block", "transform_block")
   )
-}
-
-#' Filter Expression Block
-#'
-#' @inheritParams blockr::new_block
-#'
-#' @export
-#' @importFrom dplyr filter
-filter_expr_block <- function(data, ...) {
-  initialize_block(new_filter_expr_block(data, ...), data)
 }
 
 #' @export

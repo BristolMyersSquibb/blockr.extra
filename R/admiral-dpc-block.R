@@ -11,14 +11,13 @@
 #   )
 #
 # pkgload::load_all(".");
-# stack <- new_stack(data_block, mutate_block, admiral_dpc_block);
+# stack <- new_stack(new_dataset_block, new_mutate_block, new_admiral_dpc_block);
 # serve_stack(stack)
 
 #' @importFrom admiral derive_param_computed
 #' @importFrom rlang exprs
 #' @import blockr
-new_admiral_dpc_block <- function(data,
-                                  by_vars = NULL,
+new_admiral_dpc_block <- function(by_vars = NULL,
                                   parameters = NULL,
                                   set_values_to = NULL,
                                   ...) {
@@ -121,15 +120,6 @@ new_admiral_dpc_block <- function(data,
     ...,
     class = c("admiral_dpc_block", "transform_block")
   )
-}
-
-#' Admiral Block
-#'
-#' @inheritParams blockr::new_block
-#'
-#' @export
-admiral_dpc_block <- function(data, ...) {
-  initialize_block(new_admiral_dpc_block(data, ...), data)
 }
 
 #' @export
