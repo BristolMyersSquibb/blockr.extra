@@ -32,7 +32,7 @@ new_summarize_expr_block <- function(new_cols = NULL,
     if (inherits(ans, "try-error")) {
       return(expression())
     }
-    res
+    ans
   }
 
   parse_cols <- function(new_cols) {
