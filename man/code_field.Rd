@@ -8,8 +8,6 @@
 \usage{
 new_code_field(value = character(), ...)
 
-code_field(...)
-
 \method{validate_field}{code_field}(x)
 }
 \arguments{

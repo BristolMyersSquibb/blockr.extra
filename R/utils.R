@@ -40,11 +40,11 @@ register_blockr_extra_blocks <- function(pkg) {
 
   register_blocks(
     constructor = c(
-      admiral_dpc_block,
-      filter_expr_block,
-      summarize_expr_block,
-      code_transform_block,
-      code_plot_block
+      new_admiral_dpc_block,
+      new_filter_expr_block,
+      new_summarize_expr_block,
+      new_code_transform_block,
+      new_code_plot_block
     ),
     name = c(
       "admiral dpc block",

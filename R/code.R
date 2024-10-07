@@ -13,10 +13,6 @@ new_code_field <- function(value = character(), ...) {
 
 #' @rdname code_field
 #' @export
-code_field <- function(...) validate_field(new_code_field(...))
-
-#' @rdname code_field
-#' @export
 validate_field.code_field <- function(x) {
   x
 }
@@ -39,11 +35,10 @@ ui_update.code_field <- function(x, session, id, name) {
 }
 
 #' Code Block
-#' @param data Dataset.
 #' @param ... Ignored.
 #' @name code_block
 #' @export
-new_code_transform_block <- function(data, ...) {
+new_code_transform_block <- function(...) {
   new_block(
     fields = list(
       code = new_code_field("data # from parent block")
@@ -60,13 +55,7 @@ new_code_transform_block <- function(data, ...) {
 
 #' @rdname code_block
 #' @export
-code_transform_block <- function(data, ...) {
-  initialize_block(new_code_transform_block(data, ...), data)
-}
-
-#' @rdname code_block
-#' @export
-new_code_plot_block <- function(data, ...) {
+new_code_plot_block <- function(...) {
   new_block(
     fields = list(
       code = new_code_field("plot(data) # from parent block")
@@ -79,12 +68,6 @@ new_code_plot_block <- function(data, ...) {
     ...,
     class = c("code_plot_block", "plot_block", "submit_block")
   )
-}
-
-#' @rdname code_block
-#' @export
-code_plot_block <- function(data, ...) {
-  initialize_block(new_code_plot_block(data, ...), data)
 }
 
 code_layout_fields <- function(x, fields, ...) {
