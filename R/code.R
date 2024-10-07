@@ -35,7 +35,6 @@ ui_update.code_field <- function(x, session, id, name) {
 }
 
 #' Code Block
-#' @param data Dataset.
 #' @param ... Ignored.
 #' @name code_block
 #' @export

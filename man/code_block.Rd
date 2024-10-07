@@ -12,8 +12,6 @@ new_code_plot_block(...)
 }
 \arguments{
 \item{...}{Ignored.}
-
-\item{data}{Dataset.}
 }
 \description{
 Code Block
