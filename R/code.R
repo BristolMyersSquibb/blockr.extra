@@ -36,6 +36,7 @@ ui_update.code_field <- function(x, session, id, name) {
 
 #' Code Block
 #' @param ... Ignored.
+#' @param submit Whether to display submit button.
 #' @name code_block
 #' @export
 new_code_transform_block <- function(..., submit = NA) {

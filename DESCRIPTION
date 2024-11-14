@@ -35,7 +35,7 @@ Imports:
     blockr,
     ggplot2
 Remotes:
-    BristolMyersSquibb/blockr
+    BristolMyersSquibb/blockr@436-registry-id
 Suggests:
     knitr,
     shinyAce,

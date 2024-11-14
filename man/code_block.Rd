@@ -12,6 +12,8 @@ new_code_plot_block(..., submit = NA)
 }
 \arguments{
 \item{...}{Ignored.}
+
+\item{submit}{Whether to display submit button.}
 }
 \description{
 Code Block

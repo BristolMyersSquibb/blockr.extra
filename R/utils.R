@@ -34,7 +34,6 @@ ui_fields_one_column <- function(x, ns, inputs_hidden) {
 }
 
 #' @export
-#' @method block_input_check plot_block
 block_input_check.plot_block <- function(x, data, ...) {
 
   if (inherits(data, "data.frame")) {
@@ -45,7 +44,6 @@ block_input_check.plot_block <- function(x, data, ...) {
 }
 
 #' @export
-#' @method block_output_ptype plot_block
 block_output_ptype.plot_block <- function(x, ...) ggplot2::ggplot()
 
 register_blockr_extra_blocks <- function(pkg) {
