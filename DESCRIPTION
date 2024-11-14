@@ -1,6 +1,6 @@
 Package: blockr.extra
 Title: Experimental Blocks for blockr
-Version: 0.0.2.9000
+Version: 0.0.3.9000
 Authors@R:
     c(person(given = "Christoph",
              family = "Sax",
@@ -32,9 +32,10 @@ Imports:
     admiral,
     dplyr,
     rlang,
-    blockr
+    blockr,
+    ggplot2
 Remotes:
-    BristolMyersSquibb/blockr
+    BristolMyersSquibb/blockr@436-registry-id
 Suggests:
     knitr,
     shinyAce,

@@ -6,12 +6,14 @@
 \alias{new_code_plot_block}
 \title{Code Block}
 \usage{
-new_code_transform_block(...)
+new_code_transform_block(..., submit = NA)
 
-new_code_plot_block(...)
+new_code_plot_block(..., submit = NA)
 }
 \arguments{
 \item{...}{Ignored.}
+
+\item{submit}{Whether to display submit button.}
 }
 \description{
 Code Block
