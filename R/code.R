@@ -38,7 +38,7 @@ ui_update.code_field <- function(x, session, id, name) {
 #' @param ... Ignored.
 #' @name code_block
 #' @export
-new_code_transform_block <- function(...) {
+new_code_transform_block <- function(..., submit = NA) {
   new_block(
     fields = list(
       code = new_code_field("data # from parent block")
@@ -49,13 +49,14 @@ new_code_transform_block <- function(...) {
         eval()
     }),
     ...,
-    class = c("code_transform_block", "transform_block", "submit_block")
+    submit = submit,
+    class = c("code_transform_block", "transform_block")
   )
 }
 
 #' @rdname code_block
 #' @export
-new_code_plot_block <- function(...) {
+new_code_plot_block <- function(..., submit = NA) {
   new_block(
     fields = list(
       code = new_code_field("plot(data) # from parent block")
@@ -66,7 +67,8 @@ new_code_plot_block <- function(...) {
         eval()
     }),
     ...,
-    class = c("code_plot_block", "plot_block", "submit_block")
+    submit = submit,
+    class = c("code_plot_block", "plot_block")
   )
 }
 
@@ -75,8 +77,7 @@ code_layout_fields <- function(x, fields, ...) {
   # CSS that pushes the editor up and hides the buttons
   div(
     class = "mt-4",
-    fields$code,
-    fields$submit
+    fields$code
   )
 }
 

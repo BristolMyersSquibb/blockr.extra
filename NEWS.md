@@ -1,3 +1,9 @@
+# blockr.extra 0.0.3.9000
+
+## Minor change
+- Cleanup `register_adam_blocks()` according to latest blockr registry.
+- Update `submit` setup for blocks.
+
 # blockr.extra 0.0.2.9000
 
 ## Documentation

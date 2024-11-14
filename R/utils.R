@@ -33,6 +33,21 @@ ui_fields_one_column <- function(x, ns, inputs_hidden) {
   )
 }
 
+#' @export
+#' @method block_input_check plot_block
+block_input_check.plot_block <- function(x, data, ...) {
+
+  if (inherits(data, "data.frame")) {
+    return(invisible(NULL))
+  }
+
+  input_failure("Expecting data.frame input.")
+}
+
+#' @export
+#' @method block_output_ptype plot_block
+block_output_ptype.plot_block <- function(x, ...) ggplot2::ggplot()
+
 register_blockr_extra_blocks <- function(pkg) {
 
   if (missing(pkg))
@@ -60,27 +75,7 @@ register_blockr_extra_blocks <- function(pkg) {
       "Code transform block",
       "Code plot block"
     ),
-    classes = list(
-      c("admiral_dpc_block", "transform_block"),
-      c("filter_expr_block", "transform_block"),
-      c("summarize_expr_block", "transform_block"),
-      c("code_transform_block", "transform_block", "submit_block"),
-      c("code_plot_block", "plot_block", "submit_block")
-    ),
-    input = c(
-      NA_character_,
-      "data.frame",
-      "data.frame",
-      "data.frame",
-      "data.frame"
-    ),
-    output = c(
-      "data.frame",
-      "data.frame",
-      "data.frame",
-      "data.frame",
-      "data.frame"
-    ),
+    category = c("transform", "transform", "transform", "transform", "plot"),
     package = pkg
   )
 }
